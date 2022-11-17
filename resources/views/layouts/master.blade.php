@@ -71,9 +71,9 @@ desired effect
         <!-- Logo -->
         <a href="index2.html" class="logo">
             <!-- mini logo for sidebar mini 50x50 pixels -->
-            <span class="logo-mini">BPR ADM</span>
+            <span class="logo-mini">ADM</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>Inventory</b> BPR ADM</span>
+            <span class="logo-lg">Inventory<b> BPR ADM</b></span>
         </a>
 
         <!-- Header Navbar -->

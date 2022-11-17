@@ -34,7 +34,7 @@
 
 <div class="login-box">
     <div class="login-logo">
-        <h1><b>Inventory</b>BPR ADM</h1>
+        <h1>Sistem Inventory BPR Asli Dana Mandiri</h1>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
