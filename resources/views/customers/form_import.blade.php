@@ -4,7 +4,7 @@
         <!-- general form elements -->
         <div class="box box-primary">
             <div class="box-header with-border">
-                <h3 class="box-title">Import Data Customer</h3>
+                <h3 class="box-title">Import Data Karyawan</h3>
                 <br><br>
                 @if(session('success'))
                     <div class="alert alert-success alert-dismissible ">
@@ -47,7 +47,7 @@
                 <div class="alert alert-warning alert-dismissible">
                     <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                     <i class="icon fa fa-warning"></i> Perhatian! &nbsp;
-                    File Data Customer Only Type (.xls, .xlsx)
+                    File Data Employee Only Type (.xls, .xlsx)
                 </div>
                 </div>
             </form>

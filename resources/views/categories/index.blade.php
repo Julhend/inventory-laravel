@@ -10,11 +10,11 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Categories</h3>
+            <h3 class="box-title">Data Kategori</h3>
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Categories</a>
+            <a onclick="addForm()" class="btn btn-primary" >Tambah Kategori</a>
             <a href="{{ route('exportPDF.categoriesAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.categoriesAll') }}" class="btn btn-success">Export Excel</a>
         </div>

@@ -15,11 +15,11 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Products Out</h3>
+            <h3 class="box-title">Data Barang Keluar</h3>
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Products Out</a>
+            <a onclick="addForm()" class="btn btn-primary" >Tambah Barang Keluar</a>
             <a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Export Excel</a>
         </div>
@@ -31,9 +31,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Products</th>
-                    <th>Customer</th>
+                    <th>Karyawan</th>
                     <th>QTY</th>
-                    <th>Tanggal Pembelian</th>
+                    <th>Tanggal Keluar</th>
                     <th></th>
                 </tr>
                 </thead>
@@ -52,7 +52,7 @@
         </div>
 
         {{--<div class="box-header">--}}
-            {{--<a onclick="addForm()" class="btn btn-primary" >Add Products Out</a>--}}
+            {{--<a onclick="addForm()" class="btn btn-primary" >Tambah Barang Keluar</a>--}}
             {{--<a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Export PDF</a>--}}
             {{--<a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Export Excel</a>--}}
         {{--</div>--}}
@@ -64,9 +64,9 @@
                 <tr>
                     <th>ID</th>
                     <th>Products</th>
-                    <th>Customer</th>
+                    <th>Karyawan</th>
                     <th>QTY</th>
-                    <th>Tanggal Pembelian</th>
+                    <th>Tanggal Keluar</th>
                     <th>Export Invoice</th>
                 </tr>
                 </thead>

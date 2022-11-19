@@ -10,9 +10,9 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Products</h3>
+            <h3 class="box-title">Data Barang</h3>
 
-            <a onclick="addForm()" class="btn btn-primary pull-right" style="margin-top: -8px;">Add Products</a>
+            <a onclick="addForm()" class="btn btn-primary pull-right" style="margin-top: -8px;">Tambah Barang</a>
         </div>
 
 

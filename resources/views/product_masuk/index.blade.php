@@ -15,13 +15,13 @@
     <div class="box">
 
         <div class="box-header">
-            <h3 class="box-title">Data Products In</h3>
+            <h3 class="box-title">Data Barang Masuk</h3>
 
 
         </div>
 
         <div class="box-header">
-            <a onclick="addForm()" class="btn btn-primary" >Add Products In</a>
+            <a onclick="addForm()" class="btn btn-primary" >Tambah Barang Masuk</a>
             <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
         </div>
@@ -55,7 +55,7 @@
         </div>
 
     {{--<div class="box-header">--}}
-    {{--<a onclick="addForm()" class="btn btn-primary" >Add Products Out</a>--}}
+    {{--<a onclick="addForm()" class="btn btn-primary" >Tambah Barang Masuk</a>--}}
     {{--<a href="{{ route('exportPDF.productKeluarAll') }}" class="btn btn-danger">Export PDF</a>--}}
     {{--<a href="{{ route('exportExcel.productKeluarAll') }}" class="btn btn-success">Export Excel</a>--}}
     {{--</div>--}}
