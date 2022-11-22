@@ -170,7 +170,7 @@ desired effect
             Anything you want
         </div> -->
         <!-- Default to the left -->
-        <strong>Copyright &copy; 2022 <a href="#">Agnes | STTI</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; 2022 <a href="#">Agnes & Calista | STTI</a>.</strong> All rights reserved.
     </footer>
 
     <!-- Control Sidebar -->
