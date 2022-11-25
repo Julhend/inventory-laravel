@@ -25,8 +25,8 @@
             <td colspan="2">
                 <table>
                     <tr>
-                        <td class="title">
-                            <!-- <img src="https://www.sparksuite.com/images/logo.png" style="width:100%; max-width:300px;"> -->
+                    <td class="title">
+                                <h1>Invoice Barang Keluar</h1>
                         </td>
                     </tr>
                 </table>
@@ -70,20 +70,16 @@
 
 
         <table border="0" width="80%">
-            <tr align="right">
-                <td>Hormat Kami</td>
-            </tr>
-        </table>
-
+        <tr align="right">
+            <td><br/>Hormat Kami<br /><br/><br /></td>
+        </tr>
+    </table>
     <table border="0" width="80%">
         <tr align="right">
-            <!-- <td><img src="https://upload.wikimedia.org/wikipedia/en/f/f4/Timothy_Spall_Signature.png" width="100px" height="100px"></td> -->
+            <td>Bank Perkreditan Rakyat</td>
         </tr>
-
+        <tr align="right">
+            <td>Asli Dana Mandiri</td>
+        </tr>
     </table>
-        <table border="0" width="80%">
-            <tr align="right">
-                <!-- <td>Nama</td> -->
-            </tr>
-        </table>
 </div>

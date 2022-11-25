@@ -180,6 +180,12 @@ class ProductMasukController extends Controller
         $pdf = PDF::loadView('product_masuk.productMasukPDF', compact('product_masuk'));
         return $pdf->download($product_masuk->id.'_product_masuk.pdf');
     }
+    public function exportProductRetur($id)
+    {
+        $product_masuk = Product_Masuk::findOrFail($id);
+        $pdf = PDF::loadView('product_masuk.productMasukRetur', compact('product_masuk'));
+        return $pdf->download($product_masuk->id.'_nota_retur.pdf');
+    }
 
     public function exportExcel()
     {

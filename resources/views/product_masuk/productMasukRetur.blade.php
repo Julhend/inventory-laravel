@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Invoice</title>
+    <title>Nota Retur</title>
 
 
 </head>
@@ -25,8 +25,8 @@
             <td colspan="2">
                 <table>
                     <tr>
-                    <td class="title">
-                                <h1>Invoice Barang Masuk</h1>
+                        <td class="title">
+                                <h1>Nota Retur</h1>
                         </td>
                     </tr>
                 </table>
