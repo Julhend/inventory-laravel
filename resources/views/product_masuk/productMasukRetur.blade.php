@@ -37,7 +37,7 @@
 
     <table border="0" id="table-data" width="80%">
         <tr>
-            <td width="70px">Invoice ID</td>
+            <td width="70px">Nota ID</td>
             <td width="">: {{ $product_masuk->id }}</td>
             <td width="30px">Created</td>
             <td>: {{ $product_masuk->tanggal }}</td>
