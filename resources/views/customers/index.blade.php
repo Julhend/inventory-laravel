@@ -92,7 +92,7 @@
             $('input[name=_method]').val('POST');
             $('#modal-form').modal('show');
             $('#modal-form form')[0].reset();
-            $('.modal-title').text('Add Customers');
+            $('.modal-title').text('Tambah Karyawan');
         }
 
         function editForm(id) {
@@ -105,7 +105,7 @@
                 dataType: "JSON",
                 success: function(data) {
                     $('#modal-form').modal('show');
-                    $('.modal-title').text('Edit Customers');
+                    $('.modal-title').text('Edit Karyawan');
 
                     $('#id').val(data.id);
                     $('#nama').val(data.nama);
