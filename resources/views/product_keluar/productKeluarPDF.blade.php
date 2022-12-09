@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Invoice</title>
@@ -13,29 +14,39 @@
         padding: 3px;
     }
 
-    #table-data td, #table-data th {
+    #table-data td,
+    #table-data th {
         border: 1px solid black;
+    }
+
+    h2,
+    h3 {
+        text-align: center;
+        margin-right: 100px;
+        margin-left: 100px;
+
     }
 </style>
 
 <body>
-<div class="invoice-box">
-    <table cellpadding="0" cellspacing="0">
-        <tr class="top">
-            <td colspan="2">
-                <table>
-                    <tr>
-                    <td class="title">
-                                <h1>Invoice Barang Keluar</h1>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
-    </table>
+    <div class="invoice-box">
+        <table cellpadding="0" cellspacing="0">
+            <tr class="top">
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td class="title">
+                                <h2>Bank Perkreditan Rakyat Asli Dana Mandiri</h2>
+                                <h3>Invoice Barang Keluar</h3>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
 
 
-        <table border="0" id="table-data" width="80%">
+        <table border="0" id="table-data" width="100%">
             <tr>
                 <td width="70px">Invoice ID</td>
                 <td width="">: {{ $product_keluar->id }}</td>
@@ -59,27 +70,24 @@
 
             <tr>
                 <td>Product</td>
-                <td >: {{ $product_keluar->product->nama }}</td>
+                <td>: {{ $product_keluar->product->nama }}</td>
                 <td>Quantity</td>
-                <td >: {{ $product_keluar->qty }}</td>
+                <td>: {{ $product_keluar->qty }}</td>
             </tr>
 
         </table>
 
-        {{--<hr  size="2px" color="black" align="left" width="45%">--}}
+        {{--<hr size="2px" color="black" align="left" width="45%">--}}
 
 
-        <table border="0" width="80%">
-        <tr align="right">
-            <td><br/>Hormat Kami<br /><br/><br /></td>
-        </tr>
-    </table>
-    <table border="0" width="80%">
-        <tr align="right">
-            <td>Bank Perkreditan Rakyat</td>
-        </tr>
-        <tr align="right">
-            <td>Asli Dana Mandiri</td>
-        </tr>
-    </table>
-</div>
+        <table border="0" width="100%">
+    <tr align="right">
+        <td><br />Mengetahui<br /><br /><br /><br /></td>
+    </tr>
+</table>
+<table border="0" width="100%">
+    <tr align="right">
+        <td>(______________________)</td>
+    </tr>
+</table>
+    </div>

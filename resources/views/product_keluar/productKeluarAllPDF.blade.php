@@ -21,14 +21,19 @@
         width: 100%;
     }
 
-    #product-masuk td, #product-masuk th {
+    #product-masuk td,
+    #product-masuk th {
         border: 1px solid #ddd;
         padding: 8px;
     }
 
-    #product-masuk tr:nth-child(even){background-color: #f2f2f2;}
+    #product-masuk tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-    #product-masuk tr:hover {background-color: #ddd;}
+    #product-masuk tr:hover {
+        background-color: #ddd;
+    }
 
     #product-masuk th {
         padding-top: 12px;
@@ -37,20 +42,46 @@
         background-color: #4CAF50;
         color: white;
     }
+
+    h2,
+    h3 {
+        text-align: center;
+        margin-right: 100px;
+        margin-left: 100px;
+
+    }
 </style>
+
+<table cellpadding="0" cellspacing="0">
+    <tr class="top">
+        <td colspan="2">
+            <table>
+                <tr>
+                    <td class="title">
+                        <div>
+
+                            <h2>Bank Perkreditan Rakyat Asli Dana Mandiri</h2>
+                            <h3>Laporan Barang Keluar</h3>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
 <table id="product-masuk" width="100%">
     <thead>
-    <tr>
-        <td>ID</td>
-        <td>Product</td>
-        <td>Customer</td>
-        <td>Quantity</td>
-        <td>Date</td>
-    </tr>
+        <tr>
+            <td>ID</td>
+            <td>Product</td>
+            <td>Customer</td>
+            <td>Quantity</td>
+            <td>Date</td>
+        </tr>
     </thead>
     @foreach($product_keluar as $p)
-        <tbody>
+    <tbody>
         <tr>
             <td>{{ $p->id }}</td>
             <td>{{ $p->product->nama }}</td>
@@ -58,11 +89,21 @@
             <td>{{ $p->qty }}</td>
             <td>{{ $p->tanggal }}</td>
         </tr>
-        </tbody>
+    </tbody>
     @endforeach
 
 </table>
 
+<table border="0" width="100%">
+    <tr align="right">
+        <td><br />Mengetahui<br /><br /><br /><br /></td>
+    </tr>
+</table>
+<table border="0" width="100%">
+    <tr align="right">
+        <td>(______________________)</td>
+    </tr>
+</table>
 
 {{--<!-- jQuery 3 -->--}}
 {{--<script src="{{  asset('assets/bower_components/jquery/dist/jquery.min.js') }} "></script>--}}
@@ -72,5 +113,3 @@
 {{--<script src="{{  asset('assets/dist/js/adminlte.min.js') }}"></script>--}}
 {{--</body>--}}
 {{--</html>--}}
-
-

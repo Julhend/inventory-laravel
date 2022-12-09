@@ -6,6 +6,7 @@ use App\Category;
 use App\Product;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use PDF;
 
 class ProductController extends Controller
 {
@@ -186,5 +187,13 @@ class ProductController extends Controller
             })
             ->rawColumns(['category_name','show_photo','action'])->make(true);
 
+    }
+
+
+    public function exportProductAll()
+    {
+        $product = Product::all();
+        $pdf = PDF::loadView('products.productAllPDF',compact('product'));
+        return $pdf->download('product.pdf');
     }
 }

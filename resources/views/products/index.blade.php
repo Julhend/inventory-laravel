@@ -13,7 +13,14 @@
             <h3 class="box-title">Data Barang</h3>
 
             <a onclick="addForm()" class="btn btn-primary pull-right" style="margin-top: -8px;">Tambah Barang</a>
+            <a href="{{ route('exportPDF.productAll') }}" class="btn btn-danger">Export PDF</a>
         </div>
+<!-- 
+        <div class="box-header">
+            <a onclick="addForm()" class="btn btn-primary" >Tambah Barang Masuk</a>
+            <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
+            <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
+        </div> -->
 
 
         <!-- /.box-header -->

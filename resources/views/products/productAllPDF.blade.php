@@ -11,7 +11,7 @@
 {{--<!-- Ionicons -->--}}
 {{--<link rel="stylesheet" href="{{ asset('assets/bower_components/Ionicons/css/ionicons.min.css')}} ">--}}
 
-{{--<title>Product Masuk Exports All PDF</title>--}}
+{{--<title>Product Exports All PDF</title>--}}
 {{--</head>--}}
 {{--<body>--}}
 <style>
@@ -42,30 +42,69 @@
         background-color: #4CAF50;
         color: white;
     }
+
+    h2,
+    h3 {
+        text-align: center;
+        margin-right: 100px;
+        margin-left: 100px;
+
+    }
 </style>
+
+
+
+<table cellpadding="0" cellspacing="0">
+    <tr class="top">
+        <td colspan="2">
+            <table>
+                <tr>
+                    <td class="title">
+                        <div>
+
+                            <h2>Bank Perkreditan Rakyat Asli Dana Mandiri</h2>
+                            <h3>Laporan Data Barang</h3>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
 <table id="product-masuk" width="100%">
     <thead>
         <tr>
-            <td>ID</td>
-            <td>Product</td>
-            <td>Customer</td>
-            <td>Quantity</td>
-            <td>Date</td>
+            <th>ID</th>
+            <th>Nama</th>
+            <th>Harga</th>
+            <th>QTY</th>
+            <th>Category</th>
         </tr>
     </thead>
-    @foreach($product_keluar as $p)
+    @foreach($product as $p)
     <tbody>
         <tr>
             <td>{{ $p->id }}</td>
-            <td>{{ $p->product->nama }}</td>
-            <td>{{ $p->customer->nama }}</td>
+            <td>{{ $p->nama }}</td>
+            <td>{{ $p->harga }}</td>
             <td>{{ $p->qty }}</td>
-            <td>{{ $p->tanggal }}</td>
+            <td>{{ $p->category->name }}</td>
         </tr>
     </tbody>
     @endforeach
 
+</table>
+
+<table border="0" width="100%">
+    <tr align="right">
+        <td><br />Mengetahui<br /><br /><br /><br /></td>
+    </tr>
+</table>
+<table border="0" width="100%">
+    <tr align="right">
+        <td>(______________________)</td>
+    </tr>
 </table>
 
 

@@ -21,14 +21,19 @@
         width: 100%;
     }
 
-    #categories td, #categories th {
+    #categories td,
+    #categories th {
         border: 1px solid #ddd;
         padding: 8px;
     }
 
-    #categories tr:nth-child(even){background-color: #f2f2f2;}
+    #categories tr:nth-child(even) {
+        background-color: #f2f2f2;
+    }
 
-    #categories tr:hover {background-color: #ddd;}
+    #categories tr:hover {
+        background-color: #ddd;
+    }
 
     #categories th {
         padding-top: 12px;
@@ -37,28 +42,62 @@
         background-color: #4CAF50;
         color: white;
     }
+
+    h2,
+    h3 {
+        text-align: center;
+        margin-right: 100px;
+        margin-left: 100px;
+
+    }
 </style>
+
+<table cellpadding="0" cellspacing="0">
+    <tr class="top">
+        <td colspan="2">
+            <table>
+                <tr>
+                    <td class="title">
+                        <h2>Bank Perkreditan Rakyat Asli Dana Mandiri</h2>
+                        <h3>Laporan Data Supplier</h3>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 
 <table id="categories" width="100%">
     <thead>
-    <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Address</td>
-        <td>Email</td>
-    </tr>
+        <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Address</td>
+            <td>Email</td>
+        </tr>
     </thead>
     @foreach($suppliers as $s)
-        <tbody>
+    <tbody>
         <tr>
             <td>{{ $s->id }}</td>
             <td>{{ $s->nama }}</td>
             <td>{{ $s->alamat }}</td>
             <td>{{ $s->email }}</td>
         </tr>
-        </tbody>
+    </tbody>
     @endforeach
 
+</table>
+
+<table border="0" width="100%">
+    <tr align="right">
+        <td><br />Mengetahui<br /><br /><br /><br /></td>
+    </tr>
+</table>
+<table border="0" width="100%">
+    <tr align="right">
+        <td>(______________________)</td>
+    </tr>
 </table>
 
 
@@ -70,5 +109,3 @@
 {{--<script src="{{  asset('assets/dist/js/adminlte.min.js') }}"></script>--}}
 {{--</body>--}}
 {{--</html>--}}
-
-

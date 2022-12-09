@@ -85,16 +85,16 @@
             </div> -->
         </form>
         <!-- /.social-auth-links -->
-        <div class="social-auth-links text-center">
-            <p>- OR -</p>
+        <!-- <div class="social-auth-links text-center">
+            <!-- <p>- OR -</p> -->
             <!-- @if (Route::has('password.request'))
                 <a href="{{ route('password.request') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-fw fa-key"></i> Forgot Password ?</a>
             @endif -->
 
-            @if (Route::has('register'))
+            <!-- @if (Route::has('register'))
                 <a href="{{ route('register') }}" class="btn btn-block btn-social btn-facebook btn-flat"><i class="fa fa-fw fa-user-plus"></i> Sign Up</a>
-            @endif
-        </div>
+            @endif -->
+        <!-- </div>  -->
 
     </div>
     <!-- /.login-box-body -->
