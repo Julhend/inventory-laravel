@@ -43,13 +43,17 @@
         color: white;
     }
 
-    h2,
-    h3 {
+    h2,h3{
+        text-align: left;
+        /* margin-right: 100px;
+        margin-left: 100px; */
+    }
+    /* h3 {
         text-align: center;
         margin-right: 100px;
         margin-left: 100px;
 
-    }
+    } */
 </style>
 
 
@@ -62,7 +66,7 @@
                     <td class="title">
                         <div>
 
-                            <h2>Bank Perkreditan Rakyat Asli Dana Mandiri</h2>
+                        <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
                             <h3>Laporan Barang Masuk</h3>
                         </div>
                     </td>
