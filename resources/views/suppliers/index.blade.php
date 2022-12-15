@@ -14,9 +14,11 @@
         </div>
 
         <div class="box-header">
+        @if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
             <a onclick="addForm()" class="btn btn-primary" >Tambah Supplier</a>
-            <a href="{{ route('exportPDF.suppliersAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.suppliersAll') }}" class="btn btn-success">Export Excel</a>
+            @endif
+            <a href="{{ route('exportPDF.suppliersAll') }}" class="btn btn-danger">Export PDF</a>
         </div>
 
 
@@ -38,10 +40,11 @@
         </div>
         <!-- /.box-body -->
     </div>
-
+    @if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
     @include('suppliers.form_import')
 
     @include('suppliers.form')
+    @endif
 
 @endsection
 

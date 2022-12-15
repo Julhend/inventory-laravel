@@ -16,9 +16,11 @@
     </div>
 
     <div class="box-header">
+    @if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
         <a onclick="addForm()" class="btn btn-primary">Tambah Karyawan</a>
-        <a href="{{ route('exportPDF.customersAll') }}" class="btn btn-danger">Export PDF</a>
         <a href="{{ route('exportExcel.customersAll') }}" class="btn btn-success">Export Excel</a>
+        @endif
+        <a href="{{ route('exportPDF.customersAll') }}" class="btn btn-danger">Export PDF</a>
     </div>
 
 
@@ -41,10 +43,12 @@
     <!-- /.box-body -->
 </div>
 
+@if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
 @include('customers.form_import')
 
 @include('customers.form')
 
+@endif
 @endsection
 
 @section('bot')

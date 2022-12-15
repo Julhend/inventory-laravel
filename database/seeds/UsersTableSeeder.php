@@ -13,14 +13,20 @@ class UsersTableSeeder extends Seeder
     {
         $records = [
     [
-        'name' => 'super',
+        'name' => 'admin',
         'email' => 'admin@admin.com',
         'role' => 'admin',
         'password' => bcrypt('123456')
     ],
     [
-        'name' => 'user',
+        'name' => 'staff',
         'email' => 'user@user.com',
+        'role' => 'staff',
+        'password' => bcrypt('123456')
+    ],
+    [
+        'name' => 'kepala bagian',
+        'email' => 'kepalabagian@lead.com',
         'role' => 'staff',
         'password' => bcrypt('123456')
     ]

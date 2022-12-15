@@ -10,13 +10,13 @@ use App\Product_Keluar;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use PDF;
-
+use Illuminate\Support\Facades\Auth;
 
 class ProductKeluarController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('role:admin,staff');
+        $this->middleware('role:admin,staff,lead');
     }
     /**
      * Display a listing of the resource.
@@ -156,11 +156,13 @@ class ProductKeluarController extends Controller
                 return $product->customer->nama;
             })
             ->addColumn('action', function($product){
+                if(Auth::user()->role == 'admin' || Auth::user()->role == 'staff' ){
                 return 
                 // '<a href="#" class="btn btn-info btn-xs"><i class="glyphicon glyphicon-eye-open"></i> Show</a> ' .
                     '<a onclick="editForm('. $product->id .')" class="btn btn-primary btn-xs"><i class="glyphicon glyphicon-edit"></i> Edit</a> ' .
                     '<a onclick="deleteData('. $product->id .')" class="btn btn-danger btn-xs"><i class="glyphicon glyphicon-trash"></i> Delete</a>';
-            })
+                }
+                })
             ->rawColumns(['products_name','customer_name','action'])->make(true);
 
     }

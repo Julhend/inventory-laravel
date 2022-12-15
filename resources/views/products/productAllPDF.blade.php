@@ -50,6 +50,7 @@
         margin-left: 100px; */
 
     }
+
 </style>
 
 
@@ -61,7 +62,7 @@
                 <tr>
                     <td class="title">
                         <div>
-                        <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
+                            <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
                             <h3>Laporan Data Barang</h3>
                         </div>
                     </td>
@@ -81,6 +82,7 @@
             <th>Category</th>
         </tr>
     </thead>
+    <?php $sum_tot_qty = 0 ?>
     @foreach($product as $p)
     <tbody>
         <tr>
@@ -90,11 +92,23 @@
             <td>{{ $p->qty }}</td>
             <td>{{ $p->category->name }}</td>
         </tr>
+        {{-- <p> Test</p> --}}
     </tbody>
+    <?php $sum_tot_qty += $p->qty ?>
     @endforeach
+
+    {{-- <tr>
+        <td>{{ $$product->nama }}</td>
+    </tr> --}}
+
 
 </table>
 
+<table border="0" width="100%">
+    <tr align="right">
+        <td><br />Total Quantity : {{$sum_tot_qty}}<br /><br /><br /><br /></td>
+    </tr>
+</table>
 <table border="0" width="100%">
     <tr align="right">
         <td><br />Mengetahui<br /><br /><br /><br /></td>

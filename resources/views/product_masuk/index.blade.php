@@ -21,9 +21,11 @@
         </div>
 
         <div class="box-header">
+        @if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
             <a onclick="addForm()" class="btn btn-primary" >Tambah Barang Masuk</a>
-            <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
             <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
+            @endif
+            <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
         </div>
 
 

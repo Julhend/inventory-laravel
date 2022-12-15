@@ -50,6 +50,7 @@
         margin-left: 100px; */
 
     }
+
 </style>
 
 <table cellpadding="0" cellspacing="0">
@@ -60,7 +61,7 @@
                     <td class="title">
                         <div>
 
-                        <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
+                            <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
                             <h3>Laporan Barang Keluar</h3>
                         </div>
                     </td>
@@ -80,6 +81,7 @@
             <td>Date</td>
         </tr>
     </thead>
+    <?php $sum_tot_qty = 0 ?>
     @foreach($product_keluar as $p)
     <tbody>
         <tr>
@@ -90,8 +92,15 @@
             <td>{{ $p->tanggal }}</td>
         </tr>
     </tbody>
+    <?php $sum_tot_qty += $p->qty ?>
     @endforeach
 
+</table>
+
+<table border="0" width="100%">
+    <tr align="right">
+        <td><br />Total Quantity : {{$sum_tot_qty}}<br /><br /><br /><br /></td>
+    </tr>
 </table>
 
 <table border="0" width="100%">
