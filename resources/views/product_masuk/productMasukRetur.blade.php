@@ -36,6 +36,7 @@
         display: inline-block;
         width: 80%;
     } */
+
 </style>
 
 <body>
@@ -48,7 +49,7 @@
                             <td class="title">
                                 <div>
 
-                                <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
+                                    <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
                                     <h3>Nota Retur</h3>
                                 </div>
                             </td>
@@ -94,13 +95,15 @@
 
 
         <table border="0" width="100%">
-    <tr align="right">
-        <td><br />Mengetahui<br /><br /><br /><br /></td>
-    </tr>
-</table>
-<table border="0" width="100%">
-    <tr align="right">
-        <td>(______________________)</td>
-    </tr>
-</table>
+            <tr align="center">
+                <td><br />Mengetahui<br /><br /><br /><br /></td>
+                <td><br />Supplier<br /><br /><br /><br /></td>
+            </tr>
+        </table>
+        <table border="0" width="100%">
+            <tr align="center">
+                <td>______________________</td>
+                <td>______________________</td>
+            </tr>
+        </table>
     </div>

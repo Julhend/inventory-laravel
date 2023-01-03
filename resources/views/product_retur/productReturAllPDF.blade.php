@@ -11,7 +11,7 @@
 {{--<!-- Ionicons -->--}}
 {{--<link rel="stylesheet" href="{{ asset('assets/bower_components/Ionicons/css/ionicons.min.css')}} ">--}}
 
-{{--<title>Product Exports All PDF</title>--}}
+{{--<title>Product Masuk Exports All PDF</title>--}}
 {{--</head>--}}
 {{--<body>--}}
 <style>
@@ -48,12 +48,9 @@
         text-align: left;
         /* margin-right: 100px;
         margin-left: 100px; */
-
     }
 
 </style>
-
-
 
 <table cellpadding="0" cellspacing="0">
     <tr class="top">
@@ -62,8 +59,9 @@
                 <tr>
                     <td class="title">
                         <div>
+
                             <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
-                            <h3>Laporan Data Barang</h3>
+                            <h3>Nota Retur</h3>
                         </div>
                     </td>
                 </tr>
@@ -75,32 +73,26 @@
 <table id="product-masuk" width="100%">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>Nama</th>
-            <th>Harga</th>
-            <th>QTY</th>
-            <th>Category</th>
+            <td>ID</td>
+            <td>Product</td>
+            <td>Supplier</td>
+            <td>Quantity</td>
+            <td>Date</td>
         </tr>
     </thead>
     <?php $sum_tot_qty = 0 ?>
-    @foreach($product as $p)
+    @foreach($product_keluar as $p)
     <tbody>
         <tr>
             <td>{{ $p->id }}</td>
-            <td>{{ $p->nama }}</td>
-            <td>{{ $p->harga }}</td>
+            <td>{{ $p->product->nama }}</td>
+            <td>{{ $p->supplier->nama }}</td>
             <td>{{ $p->qty }}</td>
-            <td>{{ $p->category->name }}</td>
+            <td>{{ $p->tanggal }}</td>
         </tr>
-        {{-- <p> Test</p> --}}
     </tbody>
     <?php $sum_tot_qty += $p->qty ?>
     @endforeach
-
-    {{-- <tr>
-        <td>{{ $$product->nama }}</td>
-    </tr> --}}
-
 
 </table>
 
@@ -109,17 +101,19 @@
         <td><br />Total Quantity : {{$sum_tot_qty}}<br /><br /><br /><br /></td>
     </tr>
 </table>
-<table border="0" width="100%">
-    <tr align="right">
-        <td><br />Mengetahui<br /><br /><br /><br /></td>
-    </tr>
-</table>
-<table border="0" width="100%">
-    <tr align="right">
-        <td>______________________</td>
-    </tr>
-</table>
 
+<table border="0" width="100%">
+    <tr align="center">
+        <td><br />Mengetahui<br /><br /><br /><br /></td>
+        <td><br />Supplier<br /><br /><br /><br /></td>
+    </tr>
+</table>
+<table border="0" width="100%">
+    <tr align="center">
+        <td>___________________</td>
+        <td>__________________</td>
+    </tr>
+</table>
 
 {{--<!-- jQuery 3 -->--}}
 {{--<script src="{{  asset('assets/bower_components/jquery/dist/jquery.min.js') }} "></script>--}}

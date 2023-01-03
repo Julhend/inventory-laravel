@@ -48,7 +48,6 @@
         text-align: left;
         /* margin-right: 100px;
         margin-left: 100px; */
-
     }
 
 </style>
@@ -76,7 +75,7 @@
         <tr>
             <td>ID</td>
             <td>Product</td>
-            <td>Customer</td>
+            <td>Karyawan</td>
             <td>Quantity</td>
             <td>Date</td>
         </tr>
@@ -104,13 +103,15 @@
 </table>
 
 <table border="0" width="100%">
-    <tr align="right">
+    <tr align="center">
         <td><br />Mengetahui<br /><br /><br /><br /></td>
+        <td><br />Penerima<br /><br /><br /><br /></td>
     </tr>
 </table>
 <table border="0" width="100%">
-    <tr align="right">
-        <td>(______________________)</td>
+    <tr align="center">
+        <td>___________________</td>
+        <td>__________________</td>
     </tr>
 </table>
 

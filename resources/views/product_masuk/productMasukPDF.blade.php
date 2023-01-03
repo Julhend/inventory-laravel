@@ -26,6 +26,7 @@
         margin-left: 100px; */
 
     }
+
 </style>
 
 <body>
@@ -36,7 +37,7 @@
                     <table>
                         <tr>
                             <td class="title">
-                            <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
+                                <h2><img src="https://files.fm/thumb_show.php?i=v8fhdrga5" alt="logo" width="400" height="80"></h2>
                                 <h3>Invoice Barang Masuk</h3>
                             </td>
                         </tr>
@@ -81,13 +82,13 @@
 
 
         <table border="0" width="100%">
-    <tr align="right">
-        <td><br />Mengetahui<br /><br /><br /><br /></td>
-    </tr>
-</table>
-<table border="0" width="100%">
-    <tr align="right">
-        <td>(______________________)</td>
-    </tr>
-</table>
+            <tr align="right">
+                <td><br />Mengetahui<br /><br /><br /><br /></td>
+            </tr>
+        </table>
+        <table border="0" width="100%">
+            <tr align="right">
+                <td>______________________</td>
+            </tr>
+        </table>
     </div>

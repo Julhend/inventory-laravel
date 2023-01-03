@@ -60,11 +60,28 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/exportProductKeluarAllExcel','ProductKeluarController@exportExcel')->name('exportExcel.productKeluarAll');
     Route::get('/exportProductKeluar/{id}','ProductKeluarController@exportProductKeluar')->name('exportPDF.productKeluar');
 
+    Route::resource('productsRetur','ProductReturController');
+    Route::get('/apiProductsRetur','ProductReturController@apiProductsRetur')->name('api.productsRetur');
+    Route::get('/exportProductReturAll','ProductReturController@exportProductReturAll')->name('exportPDF.productReturAll');
+    
+    Route::resource('productsPo','ProductPoController');
+    Route::get('/apiProductsPo','ProductPoController@apiProductsPo')->name('api.productsPo');
+    Route::get('/exportProductPoAll','ProductPoController@exportProductPoAll')->name('exportPDF.productPoAll');
+    
     Route::resource('productsIn','ProductMasukController');
     Route::get('/apiProductsIn','ProductMasukController@apiProductsIn')->name('api.productsIn');
     Route::get('/exportProductMasukAll','ProductMasukController@exportProductMasukAll')->name('exportPDF.productMasukAll');
     Route::get('/exportProductMasukAllExcel','ProductMasukController@exportExcel')->name('exportExcel.productMasukAll');
     Route::get('/exportProductMasuk/{id}','ProductMasukController@exportProductMasuk')->name('exportPDF.productMasuk');
     Route::get('/exportProductRetur/{id}','ProductMasukController@exportProductRetur')->name('exportPDF.productRetur');
+
+    Route::resource('productsInTanter','ProductMasukTanterController');
+    Route::get('/apiProductsInTanter','ProductMasukTanterController@apiProductsInTanter')->name('api.productsInTanter');
+    Route::get('/cetak-tanda-terima-bm/{tglawal}/{tglakhir}','ProductMasukTanterController@exportProductMasukTanterAll')->name('cetak-tanda-terima-bm');
+
+    Route::resource('productsOutTanter','ProductKeluarTanterController');
+    Route::get('/apiProductsOutTanter','ProductKeluarTanterController@apiProductsOutTanter')->name('api.productsOutTanter');
+    Route::get('/cetak-tanda-terima-bk/{tglawal}/{tglakhir}','ProductKeluarTanterController@exportProductKeluarTanterAll')->name('cetak-tanda-terima-bk');
+   
 });
 

@@ -118,7 +118,7 @@
 </table>
 <table border="0" width="100%">
     <tr align="right">
-        <td>(______________________)</td>
+        <td>______________________</td>
     </tr>
 </table>
 

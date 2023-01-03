@@ -20,9 +20,9 @@
             <div class="input-group">
                 <input type="text" name="q" class="form-control" placeholder="Search...">
                 <span class="input-group-btn">
-              <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-              </button>
-            </span>
+                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                    </button>
+                </span>
             </div>
         </form>
         <!-- /.search form -->
@@ -37,14 +37,11 @@
             <li class="active"><a href="{{ route('customers.index') }}"><i class="fa fa-link"></i> <span>Karyawan</span></a></li>
             <li class="active"><a href="{{ route('suppliers.index') }}"><i class="fa fa-link"></i> <span>Supplier</span></a></li>
             <li class="active"><a href="{{ route('productsOut.index') }}"><i class="fa fa-link"></i> <span>Barang Keluar</span></a></li>
+            <li class="active"><a href="{{ route('productsOutTanter.index') }}"><i class="fa fa-link"></i> <span>Tanda Terima Barang Keluar</span></a></li>
             <li class="active"><a href="{{ route('productsIn.index') }}"><i class="fa fa-link"></i> <span>Barang Masuk</span></a></li>
-          
-
-
-
-
-
-
+            <li class="active"><a href="{{ route('productsInTanter.index') }}"><i class="fa fa-link"></i> <span>Tanda Terima Barang Masuk</span></a></li>
+            <li class="active"><a href="{{ route('productsRetur.index') }}"><i class="fa fa-link"></i> <span>Retur Barang</span></a></li>
+            <li class="active"><a href="{{ route('productsPo.index') }}"><i class="fa fa-link"></i> <span>Pre Order Barang</span></a></li>
         </ul>
         <!-- /.sidebar-menu -->
     </section>

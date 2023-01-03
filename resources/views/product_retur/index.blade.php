@@ -15,32 +15,26 @@
 <div class="box">
 
     <div class="box-header">
-        <h3 class="box-title">Data Barang Masuk</h3>
-
-
+        <h3 class="box-title">Barang Retur</h3>
     </div>
 
     <div class="box-header">
         @if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
-        <a onclick="addForm()" class="btn btn-primary">Tambah Barang Masuk</a>
-        <a href="{{ route('exportExcel.productMasukAll') }}" class="btn btn-success">Export Excel</a>
+        <a onclick="addForm()" class="btn btn-primary">Tambah Barang Retur</a>
         @endif
-        <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
+        <a href="{{ route('exportPDF.productReturAll') }}" class="btn btn-danger">Export PDF</a>
     </div>
-
-
-
 
     <!-- /.box-header -->
     <div class="box-body">
-        <table id="products-in-table" class="table table-striped">
+        <table id="products-out-table" class="table table-striped">
             <thead>
                 <tr>
                     <th>ID</th>
                     <th>Products</th>
                     <th>Supplier</th>
                     <th>QTY</th>
-                    <th>Tanggal Masuk</th>
+                    <th>Tanggal Retur</th>
                     <th></th>
                 </tr>
             </thead>
@@ -49,112 +43,7 @@
     </div>
     <!-- /.box-body -->
 </div>
-
-<div class="box col-md-6">
-
-    <div class="box-header">
-        <h3 class="box-title">Export Invoice</h3>
-    </div>
-
-    <!-- /.box-header -->
-    <div class="box-body">
-        <table id="invoice" class="table table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Products</th>
-                    <th>Supplier</th>
-                    <th>QTY</th>
-                    <th>Tanggal Pembelian</th>
-                    <th>Export Invoice</th>
-                </tr>
-            </thead>
-
-            @foreach($invoice_data as $i)
-            <tbody>
-                <td>{{ $i->id }}</td>
-                <td>{{ $i->product->nama }}</td>
-                <td>{{ $i->supplier->nama }}</td>
-                <td>{{ $i->qty }}</td>
-                <td>{{ $i->tanggal }}</td>
-                <td>
-                    <a href="{{ route('exportPDF.productMasuk', [ 'id' => $i->id ]) }}" class="btn btn-sm btn-danger">Export PDF</a>
-                </td>
-            </tbody>
-            @endforeach
-        </table>
-    </div>
-
-    <!-- /.box-body -->
-    <!-- oke -->
-    {{-- <div class="box col-md-6">
-        <div class="box-header">
-            <h3 class="box-title">Tanda Terima</h3>
-        </div>
-
-        <div class="box-header">
-            @if (auth()->user()->role == 'staff' || auth()->user()->role == 'admin')
-            <a onclick="addForm()" class="btn btn-primary">Tambah Barang Masuk</a>
-
-            @endif
-            <a href="{{ route('exportPDF.productMasukAll') }}" class="btn btn-danger">Export PDF</a>
-</div>
-
-<!-- /.box-header -->
-<div class="box-body">
-    <table id="tanter-in-table" class="table table-striped">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Products</th>
-                <th>Supplier</th>
-                <th>QTY</th>
-                <th>Tanggal Masuk</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
-</div>
-
-</div> --}}
-{{-- <div class="box col-md-6">
-
-        <div class="box-header">
-            <h3 class="box-title">Nota Retur Satuan</h3>
-        </div>
-        <div class="box-body">
-            <table id="invoice" class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Products</th>
-                        <th>Supplier</th>
-                        <th>QTY</th>
-                        <th>Tanggal Pembelian</th>
-                        <th>Nota Retur</th>
-                    </tr>
-                </thead>
-
-                @foreach($invoice_data as $i)
-                <tbody>
-                    <td>{{ $i->id }}</td>
-<td>{{ $i->product->nama }}</td>
-<td>{{ $i->supplier->nama }}</td>
-<td>{{ $i->qty }}</td>
-<td>{{ $i->tanggal }}</td>
-<td>
-    <a href="{{ route('exportPDF.productRetur', [ 'id' => $i->id ]) }}" class="btn btn-sm btn-danger">Nota</a>
-</td>
-</tbody>
-@endforeach
-</table>
-</div>
-</div> --}}
-<!-- oke -->
-
-
-@include('product_masuk.form')
+@include('product_retur.form')
 
 @endsection
 
@@ -181,19 +70,22 @@
 {{-- Validator --}}
 <script src="{{ asset('assets/validator/validator.min.js') }}"></script>
 
-{{--<script>--}}
-{{--$(function () {--}}
-{{--$('#items-table').DataTable()--}}
-{{--$('#example2').DataTable({--}}
-{{--'paging' : true,--}}
-{{--'lengthChange': false,--}}
-{{--'searching' : false,--}}
-{{--'ordering' : true,--}}
-{{--'info' : true,--}}
-{{--'autoWidth' : false--}}
-{{--})--}}
-{{--})--}}
-{{--</script>--}}
+<script>
+    $(function() {
+        // $('#items-table').DataTable()
+        $('#invoice').DataTable({
+            'paging': true
+            , 'lengthChange': false
+            , 'searching': false
+            , 'ordering': true
+            , 'info': true
+            , 'autoWidth': false
+            , 'processing': true,
+            // 'serverSide'  : true
+        })
+    })
+
+</script>
 
 <script>
     $(function() {
@@ -218,10 +110,10 @@
 </script>
 
 <script type="text/javascript">
-    var table = $('#products-in-table').DataTable({
+    var table = $('#products-out-table').DataTable({
         processing: true
         , serverSide: true
-        , ajax: "{{ route('api.productsIn') }}"
+        , ajax: "{{ route('api.productsRetur') }}"
         , columns: [{
                 data: 'id'
                 , name: 'id'
@@ -256,7 +148,7 @@
         $('input[name=_method]').val('POST');
         $('#modal-form').modal('show');
         $('#modal-form form')[0].reset();
-        $('.modal-title').text('Add Products In');
+        $('.modal-title').text('Add Products Retur');
     }
 
     function editForm(id) {
@@ -264,12 +156,12 @@
         $('input[name=_method]').val('PATCH');
         $('#modal-form form')[0].reset();
         $.ajax({
-            url: "{{ url('productsIn') }}" + '/' + id + "/edit"
+            url: "{{ url('productsRetur') }}" + '/' + id + "/edit"
             , type: "GET"
             , dataType: "JSON"
             , success: function(data) {
                 $('#modal-form').modal('show');
-                $('.modal-title').text('Edit Products In');
+                $('.modal-title').text('Edit Products');
 
                 $('#id').val(data.id);
                 $('#product_id').val(data.product_id);
@@ -295,7 +187,7 @@
             , confirmButtonText: 'Yes, delete it!'
         }).then(function() {
             $.ajax({
-                url: "{{ url('productsIn') }}" + '/' + id
+                url: "{{ url('productsRetur') }}" + '/' + id
                 , type: "POST"
                 , data: {
                     '_method': 'DELETE'
@@ -326,8 +218,8 @@
         $('#modal-form form').validator().on('submit', function(e) {
             if (!e.isDefaultPrevented()) {
                 var id = $('#id').val();
-                if (save_method == 'add') url = "{{ url('productsIn') }}";
-                else url = "{{ url('productsIn') . '/' }}" + id;
+                if (save_method == 'add') url = "{{ url('productsRetur') }}";
+                else url = "{{ url('productsRetur') . '/' }}" + id;
 
                 $.ajax({
                     url: url
