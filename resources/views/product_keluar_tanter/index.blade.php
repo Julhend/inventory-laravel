@@ -27,7 +27,12 @@
         <label for="label">Tanggal Akhir</label>
         <input type="date" name="tglakhir" id="tglakhir" class="form-control" />
         <br />
-        <a href="" onclick="this.href='/cetak-tanda-terima-bk/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value" target="_blank" class="btn btn-danger">Export Tanda Terima</a>
+        <div class="form-group">
+            <label>Karyawan</label>
+            {!! Form::select('customer_id', $customers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Employee --', 'id' => 'customer_id', 'required']) !!}
+            <span class="help-block with-errors"></span>
+        </div>
+        <a href="" onclick="this.href='/cetak-tanda-terima-bk/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value + '/' + document.getElementById('customer_id').value" target="_blank" class="btn btn-danger">Export Tanda Terima</a>
     </div>
 
 
@@ -40,7 +45,7 @@
                 <tr>
                     <th>ID</th>
                     <th>Products</th>
-                    <th>Customer</th>
+                    <th>Karyawan</th>
                     <th>QTY</th>
                     <th>Tanggal Keluar</th>
                     <th></th>

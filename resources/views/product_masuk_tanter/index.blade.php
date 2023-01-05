@@ -27,8 +27,12 @@
         <label for="label">Tanggal Akhir</label>
         <input type="date" name="tglakhir" id="tglakhir" class="form-control" />
         <br />
-        {{-- <a href="{{ route('exportPDF.productMasukTanterAll') }}" class="btn btn-danger">Export Tanda Terima</a> --}}
-        <a href="" onclick="this.href='/cetak-tanda-terima-bm/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value" target="_blank" class="btn btn-danger">Export Tanda Terima</a>
+        <div class="form-group">
+            <label>Supplier</label>
+            {!! Form::select('supplier_id', $suppliers, null, ['class' => 'form-control select', 'placeholder' => '-- Choose Supplier --', 'id' => 'supplier_id', 'required']) !!}
+            <span class="help-block with-errors"></span>
+        </div>
+        <a href="" onclick="this.href='/cetak-tanda-terima-bm/'+ document.getElementById('tglawal').value + '/' + document.getElementById('tglakhir').value + '/' + document.getElementById('supplier_id').value" target="_blank" class="btn btn-danger">Export Tanda Terima</a>
     </div>
 
 

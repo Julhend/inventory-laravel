@@ -52,10 +52,10 @@ class ProductKeluarTanterController extends Controller
 
     }
 
-    public function exportProductKeluarTanterAll($tglawal, $tglakhir)
+    public function exportProductKeluarTanterAll($tglawal, $tglakhir, $customer_id)
     {
 
-        $tanda_terima_bm = Product_Keluar::whereBetween('tanggal', [$tglawal, $tglakhir])->get();
+        $tanda_terima_bm = Product_Keluar::where('customer_id', $customer_id)->whereBetween('tanggal', [$tglawal, $tglakhir])->get();
         $pdf = PDF::loadView('product_keluar_tanter.productKeluarTanterAllPDF',compact('tanda_terima_bm'));
         return $pdf->download('tanda_terima_product_keluar.pdf');
     }

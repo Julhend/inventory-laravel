@@ -52,10 +52,10 @@ class ProductMasukTanterController extends Controller
 
     }
 
-    public function exportProductMasukTanterAll($tglawal, $tglakhir)
+    public function exportProductMasukTanterAll($tglawal, $tglakhir, $supplier_id)
     {
 
-        $tanda_terima_bm = Product_Masuk::whereBetween('tanggal', [$tglawal, $tglakhir])->get();
+        $tanda_terima_bm = Product_Masuk::where('supplier_id', $supplier_id)->whereBetween('tanggal', [$tglawal, $tglakhir])->get();
         // $product_masuk = Product_Masuk::all();
         $pdf = PDF::loadView('product_masuk_tanter.productMasukTanterAllPDF',compact('tanda_terima_bm'));
         return $pdf->download('tanda_terima_product_masuk.pdf');

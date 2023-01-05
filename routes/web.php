@@ -77,11 +77,11 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('productsInTanter','ProductMasukTanterController');
     Route::get('/apiProductsInTanter','ProductMasukTanterController@apiProductsInTanter')->name('api.productsInTanter');
-    Route::get('/cetak-tanda-terima-bm/{tglawal}/{tglakhir}','ProductMasukTanterController@exportProductMasukTanterAll')->name('cetak-tanda-terima-bm');
+    Route::get('/cetak-tanda-terima-bm/{tglawal}/{tglakhir}/{supplier_id}','ProductMasukTanterController@exportProductMasukTanterAll')->name('cetak-tanda-terima-bm');
 
     Route::resource('productsOutTanter','ProductKeluarTanterController');
     Route::get('/apiProductsOutTanter','ProductKeluarTanterController@apiProductsOutTanter')->name('api.productsOutTanter');
-    Route::get('/cetak-tanda-terima-bk/{tglawal}/{tglakhir}','ProductKeluarTanterController@exportProductKeluarTanterAll')->name('cetak-tanda-terima-bk');
+    Route::get('/cetak-tanda-terima-bk/{tglawal}/{tglakhir}/{customer_id}','ProductKeluarTanterController@exportProductKeluarTanterAll')->name('cetak-tanda-terima-bk');
    
 });
 
